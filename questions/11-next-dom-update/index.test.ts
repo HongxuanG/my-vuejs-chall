@@ -18,6 +18,6 @@ describe("next-dom-update", () => {
     await button.trigger("click")
 
     expect(wrapper.text()).toMatchInlineSnapshot('"1"')
-    expect(printLog).toMatchInlineSnapshot('"true"')
+    expect(printLog).toMatchInlineSnapshot('"false"')
   })
 })

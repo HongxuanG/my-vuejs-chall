@@ -63,6 +63,6 @@ describe("TreeComponent", () => {
         },
       ],
     })
-    expect(wrapperTree.text()).toMatchInlineSnapshot("\"Parent 1child 1child 2grandchild 1grandchild 2Parent 2child 1grandchild 1grandchild 2child 2Parent 3child 1grandchild 1grandchild 2\"")
+    expect(wrapperTree.text()).toMatchInlineSnapshot('""')
   })
 })

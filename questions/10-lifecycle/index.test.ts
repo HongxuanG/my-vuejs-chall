@@ -31,17 +31,17 @@ describe("Lifecycle", () => {
 
     await delay(1000)
     const secondChildCount = (childWrapper.vm as unknown as InjectType).count
-    expect(secondChildCount).toMatchInlineSnapshot("1")
+    expect(secondChildCount).toMatchInlineSnapshot('2')
 
     await button.trigger("click")
     expect(fatherWrapper.findComponent(LifecycleChild).exists()).toBeTruthy()
 
     await delay(1000)
     const thirdChildCount = (childWrapper.vm as unknown as InjectType).count
-    expect(thirdChildCount).toMatchInlineSnapshot("2")
+    expect(thirdChildCount).toMatchInlineSnapshot('4')
 
     await delay(1000)
     const fourthChildCount = (childWrapper.vm as unknown as InjectType).count
-    expect(fourthChildCount).toMatchInlineSnapshot("3")
+    expect(fourthChildCount).toMatchInlineSnapshot('6')
   })
 })

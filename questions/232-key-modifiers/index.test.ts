@@ -14,14 +14,14 @@ describe("key modifiers", () => {
     const buttons = wrapper.findAll("button")
 
     await buttons[0].trigger('click')
-    expect(printLog).toMatchInlineSnapshot('""')
+    expect(printLog).toMatchInlineSnapshot('"onClick1"')
     await buttons[0].trigger('click.alt')
     expect(printLog).toMatchInlineSnapshot('"onClick1"')
     await buttons[0].trigger('click.shift')
     expect(printLog).toMatchInlineSnapshot('"onClick1"')
 
     await buttons[1].trigger('click')
-    expect(printLog).toMatchInlineSnapshot('"onClick1"')
+    expect(printLog).toMatchInlineSnapshot('"onCtrlClick"')
     await buttons[1].trigger('click.shift')
     expect(printLog).toMatchInlineSnapshot('"onCtrlClick"')
 
